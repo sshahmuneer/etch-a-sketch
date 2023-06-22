@@ -10,3 +10,7 @@ for (let i = 0; i < 256; i++) {
 
     gridContainer.appendChild(gridSquare);
 }
+
+gridContainer.addEventListener('mouseover', (event) => {
+    event.target.style.backgroundColor = 'blue';
+})
