@@ -3,7 +3,8 @@ const slider = document.querySelector('.slider');
 const sliderValue = document.querySelector('.slider-value');
 
 gridContainer.addEventListener('mouseover', (event) => {
-    event.target.style.backgroundColor = 'blue';
+    // event.target.style.backgroundColor = 'blue';
+    event.target.style.backgroundColor = randomColor();
 })
 
 slider.addEventListener('input', (event) => {
@@ -22,6 +23,15 @@ function createGrid(numberOfSquaresPerSide) {
         gridSquare.style.height = `${960/numberOfSquaresPerSide}px`;    
         gridContainer.appendChild(gridSquare);
     }
+}
+
+function randomNumber(number) {
+    return Math.floor(Math.random() * number);
+}
+
+function randomColor() {
+    const color = `rgb(${randomNumber(255)}, ${randomNumber(255)}, ${randomNumber(255)})`;
+    return color;
 }
 
 sliderValue.textContent = `Slider value is: ${slider.value}`;
