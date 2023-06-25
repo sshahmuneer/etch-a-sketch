@@ -1,16 +1,27 @@
 const gridContainer = document.querySelector('.grid-container');
 const slider = document.querySelector('.slider');
 const sliderValue = document.querySelector('.slider-value');
+const form = document.querySelector('form');
+let gridEffect = form.querySelector('input[name="grid-effect"]:checked');
+
+form.addEventListener('change', (event) => {
+    gridEffect = event.target;
+});
 
 gridContainer.addEventListener('mouseover', (event) => {
-    // event.target.style.backgroundColor = 'blue';
-    event.target.style.backgroundColor = randomColor();
-})
+    if (gridEffect.value === 'random-color') {
+        event.target.style.backgroundColor = randomColor();
+    } else if (gridEffect.value === 'progressive-darkener'){
+
+    } else if (gridEffect.value === 'user-selected-color'){
+
+    } 
+});
 
 slider.addEventListener('input', (event) => {
     sliderValue.textContent = `Slider value is: ${slider.value}`;
     createGrid(+slider.value);
-})
+});
 
 function createGrid(numberOfSquaresPerSide) {
     gridContainer.replaceChildren();   
