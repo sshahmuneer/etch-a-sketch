@@ -9,13 +9,21 @@ form.addEventListener('change', (event) => {
 });
 
 gridContainer.addEventListener('mouseover', (event) => {
-    if (gridEffect.value === 'random-color') {
-        event.target.style.backgroundColor = randomColor();
-    } else if (gridEffect.value === 'progressive-darkener'){
-
-    } else if (gridEffect.value === 'user-selected-color'){
-
-    } 
+    if (event.target.classList.contains('grid-square')) {
+        if (gridEffect.value === 'random-color') {
+            event.target.style.backgroundColor = randomColor();
+        } else if (gridEffect.value === 'progressive-darkener'){
+            let currentBrightnessValue = event.target.style.filter.replace(/[^.\d]/g, '');
+            if (currentBrightnessValue !== '0') {
+                currentBrightnessValue ||= 1;
+                // +currentBrightnessValue;
+                let newBrightnessValue = +currentBrightnessValue - 0.1;
+                event.target.style.filter = `brightness(${newBrightnessValue})`;
+            }
+        } else if (gridEffect.value === 'user-selected-color'){
+    
+        } 
+    }
 });
 
 slider.addEventListener('input', (event) => {
