@@ -39,8 +39,8 @@ function createGrid(numberOfSquaresPerSide) {
     for (let i = 0; i < totalNumberOfSquares; i++) {
         const gridSquare = document.createElement('div');
         gridSquare.classList.toggle('grid-square');
-        gridSquare.style.width = `${960/numberOfSquaresPerSide}px`;
-        gridSquare.style.height = `${960/numberOfSquaresPerSide}px`;    
+        gridSquare.style.width = `${600/numberOfSquaresPerSide}px`;
+        gridSquare.style.height = `${600/numberOfSquaresPerSide}px`;    
         gridContainer.appendChild(gridSquare);
     }
 }
