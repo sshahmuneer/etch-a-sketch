@@ -12,6 +12,9 @@ form.addEventListener('change', (event) => {
 gridContainer.addEventListener('mouseover', (event) => {
     if (event.target.classList.contains('grid-square')) {
         if (gridEffect.value === 'random-color') {
+            if (event.target.style.filter !== '') {
+                event.target.style.filter = '';
+            }
             event.target.style.backgroundColor = randomColor();
         } else if (gridEffect.value === 'progressive-darkener'){
             let currentBrightnessValue = event.target.style.filter.replace(/[^.\d]/g, '');
@@ -21,6 +24,9 @@ gridContainer.addEventListener('mouseover', (event) => {
                 event.target.style.filter = `brightness(${newBrightnessValue})`;
             }
         } else if (gridEffect.value === 'user-selected-color'){
+            if (event.target.style.filter !== '') {
+                event.target.style.filter = '';
+            }
             event.target.style.backgroundColor = selectedColor.value;
         } 
     }
