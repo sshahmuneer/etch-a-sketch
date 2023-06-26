@@ -14,6 +14,7 @@ h1 {
     background-color: antiquewhite;
     margin: auto;
     border-radius: 20px;
+    font-family: 'Courier New', monospace;
 }
 
 .grid-container {
