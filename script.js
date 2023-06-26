@@ -17,7 +17,6 @@ gridContainer.addEventListener('mouseover', (event) => {
             let currentBrightnessValue = event.target.style.filter.replace(/[^.\d]/g, '');
             if (currentBrightnessValue !== '0') {
                 currentBrightnessValue ||= 1;
-                // +currentBrightnessValue;
                 let newBrightnessValue = +currentBrightnessValue - 0.1;
                 event.target.style.filter = `brightness(${newBrightnessValue})`;
             }
