@@ -1,3 +1,17 @@
+body {
+    /* background-color: #75757b; */
+    /* background-color: #78CCCB; */
+    background-color: #78cc9e;
+    text-align: center;
+}
+
+.etch-a-sketch-container {
+    width: 700px;
+    height: 700px;
+    background-color: antiquewhite;
+    margin: auto;
+}
+
 .grid-container {
     width: 600px;
     height: 600px;

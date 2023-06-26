@@ -7,22 +7,24 @@
         <script src="./script.js" defer></script>
     </head>
     <body>
-        <form>
-            <input type="radio" id="random-color" name="grid-effect" value="random-color" checked>
-            <label for="random-color">Random Color</label>
-            <input type="radio" id="progressive-darkener" name="grid-effect" value="progressive-darkener">
-            <label for="progressive-darkener">Progressive Darkener</label>
-            <input type="radio" id="user-selected-color" name="grid-effect" value="user-selected-color">
-            <label for="user-selected-color">User Selected Color</label>
-        </form>
-        <input type="color" id="selected-color" value="#ff0000">
-        <label for="selected-color"></label>
-        <div class="slider-container">
-            <label for="slider">Number of squares per side of the grid</label>
-            <input type="range" min="1" max="100" value="16" class="slider" name="slider" id="slider">
-            <div class="slider-value"></div>
-        </div>
-        <div class="grid-container">
+        <div class="etch-a-sketch-container">
+            <form>
+                <input type="radio" id="random-color" name="grid-effect" value="random-color" checked>
+                <label for="random-color">Random Color</label>
+                <input type="radio" id="progressive-darkener" name="grid-effect" value="progressive-darkener">
+                <label for="progressive-darkener">Progressive Darkener</label>
+                <input type="radio" id="user-selected-color" name="grid-effect" value="user-selected-color">
+                <label for="user-selected-color">User Selected Color</label>
+            </form>
+            <input type="color" id="selected-color" value="#ff0000">
+            <label for="selected-color"></label>
+            <div class="slider-container">
+                <label for="slider">Number of squares per side of the grid</label>
+                <input type="range" min="1" max="100" value="16" class="slider" name="slider" id="slider">
+                <div class="slider-value"></div>
+            </div>
+            <div class="grid-container">
+            </div>
         </div>
     </body>
 </html>
