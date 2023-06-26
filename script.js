@@ -28,7 +28,7 @@ gridContainer.addEventListener('mouseover', (event) => {
 });
 
 slider.addEventListener('input', (event) => {
-    sliderValue.textContent = `Slider value is: ${slider.value}`;
+    sliderValue.textContent = `Grid size is ${slider.value} x ${slider.value}`;
     createGrid(+slider.value);
 });
 
@@ -54,5 +54,5 @@ function randomColor() {
     return color;
 }
 
-sliderValue.textContent = `Slider value is: ${slider.value}`;
+sliderValue.textContent = `Grid size is ${slider.value} x ${slider.value}`;
 createGrid(+slider.value);
