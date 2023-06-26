@@ -2,6 +2,7 @@ const gridContainer = document.querySelector('.grid-container');
 const slider = document.querySelector('.slider');
 const sliderValue = document.querySelector('.slider-value');
 const form = document.querySelector('form');
+let selectedColor = document.querySelector('#selected-color');
 let gridEffect = form.querySelector('input[name="grid-effect"]:checked');
 
 form.addEventListener('change', (event) => {
@@ -21,7 +22,7 @@ gridContainer.addEventListener('mouseover', (event) => {
                 event.target.style.filter = `brightness(${newBrightnessValue})`;
             }
         } else if (gridEffect.value === 'user-selected-color'){
-    
+            event.target.style.backgroundColor = selectedColor.value;
         } 
     }
 });
